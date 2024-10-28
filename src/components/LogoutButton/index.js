@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import style from '../../styles/styles';
+import style from '../../styles/profileStyles';
 
 export default function LogoutButton({ isDarkMode, handleLogoutPress }) {
   return (

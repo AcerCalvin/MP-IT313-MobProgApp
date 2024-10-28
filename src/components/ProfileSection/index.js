@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image } from 'react-native';
-import style from '../../styles/styles';
+import style from '../../styles/profileStyles';
 
 export default function ProfileSection({ isDarkMode }) {
   return (

@@ -73,7 +73,6 @@ const style = StyleSheet.create({
     logoutText: {
         marginLeft: 10,
     },
-    
 });
 
 export default style;
