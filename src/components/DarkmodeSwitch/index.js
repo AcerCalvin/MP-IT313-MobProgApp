@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Switch } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import style from '../../styles/styles';
+import style from '../../styles/profileStyles';
 
 export default function DarkModeSwitch({ isDarkMode, toggleDarkMode }) {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
-import style from '../../styles/styles';
+import style from '../../styles/profileStyles';
 
 export default function ProfileDetails({ isDarkMode }) {
   return (
