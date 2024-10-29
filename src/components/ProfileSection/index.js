@@ -7,12 +7,11 @@ export default function ProfileSection({ isDarkMode }) {
     <View style={style.profileSection}>
       <View style={style.imageContainer}>
         <Image 
-          source={require('../../assets/ace.jpg')}  // Ensure ace.jpg is in /assets folder
+          source={require('../../assets/noUser.png')}
           style={style.profileImage} 
         />
       </View>
-      <Text style={[style.profileName, { color: isDarkMode ? '#fff' : '#000' }]}>Ace</Text>
-      <Text style={[style.subText, { color: isDarkMode ? '#ccc' : '#666' }]}>Acerdano</Text>
+      <Text style={[style.profileName, { color: isDarkMode ? '#fff' : '#000' }]}>User</Text>
     </View>
   );
 }

@@ -13,6 +13,12 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.button}>
         <Button
+          title="Go to Signup"
+          onPress={() => navigation.navigate('Signup')}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
           title="Go to Profile"
           onPress={() => navigation.navigate('Profile')}
         />

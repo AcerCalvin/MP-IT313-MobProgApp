@@ -1,34 +1,25 @@
-// src/screens/Profile/ProfileScreen.js
-import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView, StatusBar, View, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { StyleSheet, SafeAreaView, StatusBar, View } from 'react-native';
 import ProfileSection from '../../components/ProfileSection';
 import Row from '../../components/ProfileDetails';
 import LogoutButton from '../../components/LogoutButton';
-import DarkModeSwitch from '../../components/DarkmodeSwitch';
 
 const ProfileScreen = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(prevState => !prevState);
-  };
-
   const handleLogoutPress = () => {
     alert('Logged out!');
   };
 
   return (
-    <SafeAreaView style={[styles.safeArea, { backgroundColor: isDarkMode ? '#333' : '#fff' }]}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <View style={[styles.container, { backgroundColor: isDarkMode ? '#333' : '#fff' }]}>
+    <SafeAreaView style={styles.safeArea}>
+      <StatusBar barStyle="dark-content" />
+      <View style={styles.container}>
+      
+        <ProfileSection />
 
-        <DarkModeSwitch isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        <Row />
 
-        <ProfileSection isDarkMode={isDarkMode} />
 
-        <Row isDarkMode={isDarkMode} />
-
-        <LogoutButton isDarkMode={isDarkMode} handleLogoutPress={handleLogoutPress} />
+        <LogoutButton handleLogoutPress={handleLogoutPress} />
       </View>
     </SafeAreaView>
   );
@@ -42,12 +33,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-  },
-  backButton: {
-    position: 'absolute',
-    top: 10,
-    left: 10,
-    zIndex: 1,
+    justifyContent: 'top',
   },
 });
 
