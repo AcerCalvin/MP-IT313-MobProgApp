@@ -1,7 +1,6 @@
 // src/screens/Profile/ProfileScreen.js
 import React, { useState } from 'react';
 import { StyleSheet, SafeAreaView, StatusBar, View, TouchableOpacity } from 'react-native';
-import AntDesign from '@expo/vector-icons/AntDesign';
 import ProfileSection from '../../components/ProfileSection';
 import Row from '../../components/ProfileDetails';
 import LogoutButton from '../../components/LogoutButton';
@@ -14,10 +13,6 @@ const ProfileScreen = () => {
     setIsDarkMode(prevState => !prevState);
   };
 
-  const handleBackPress = () => {
-    alert('Back button pressed!');
-  };
-
   const handleLogoutPress = () => {
     alert('Logged out!');
   };
@@ -26,9 +21,6 @@ const ProfileScreen = () => {
     <SafeAreaView style={[styles.safeArea, { backgroundColor: isDarkMode ? '#333' : '#fff' }]}>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
       <View style={[styles.container, { backgroundColor: isDarkMode ? '#333' : '#fff' }]}>
-        <TouchableOpacity style={styles.backButton} onPress={handleBackPress}>
-          <AntDesign name="arrowleft" size={24} color={isDarkMode ? '#fff' : '#000'} />
-        </TouchableOpacity>
 
         <DarkModeSwitch isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
