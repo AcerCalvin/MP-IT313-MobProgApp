@@ -2,16 +2,6 @@ import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
 
-    // Dark Mode Switch Styles //
-    darkModeSwitch: {
-        position: 'absolute',
-        top: 10,
-        right: 10,
-        flexDirection: 'row',
-        alignItems: 'center',
-        zIndex: 1,
-    },
-
     // Profile Section (Avatar and Name) Styles //
     profileSection: {
         alignItems: 'center',
@@ -19,7 +9,7 @@ const style = StyleSheet.create({
         marginBottom: 40,
     },
     imageContainer: {
-        backgroundColor: 'red',
+        backgroundColor: 'white',
         borderRadius: 75,
         padding: 5,
         marginBottom: 10,
@@ -48,7 +38,7 @@ const style = StyleSheet.create({
         borderBottomWidth: 1,
     },
 
-    // Settings Row Styles //
+    // Row Styles //
     settingsText: {
         fontSize: 18,
     },
