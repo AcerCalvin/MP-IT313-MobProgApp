@@ -19,6 +19,12 @@ const HomeScreen = ({ navigation }) => {
       </View>
       <View style={styles.button}>
         <Button
+          title="Go to Password Recovery"
+          onPress={() => navigation.navigate('PasswordRecovery')}
+        />
+      </View>
+      <View style={styles.button}>
+        <Button
           title="Go to Profile"
           onPress={() => navigation.navigate('Profile')}
         />

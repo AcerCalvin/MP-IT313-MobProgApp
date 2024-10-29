@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button, TouchableOpacity } from 'react-native';
 import styles from '../../styles/loginStyles';
 
 const LoginScreen = ({ navigation }) => {
@@ -7,7 +7,6 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Add your login logic here
     alert(`Logged in as: ${username}`);
   };
 
@@ -28,7 +27,11 @@ const LoginScreen = ({ navigation }) => {
         secureTextEntry
       />
       <Button title="Login" onPress={handleLogin} />
+      <TouchableOpacity onPress={() => navigation.navigate('PasswordRecovery')}>
+      <Text style={{ color: 'blue', marginTop: 10 }}>Forgot Password?</Text>
+    </TouchableOpacity>
     </View>
+      
   );
 };
 
