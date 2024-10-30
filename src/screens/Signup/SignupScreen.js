@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, Alert } from 'react-native';
+import { View, Text, TextInput, Button, Alert, TouchableOpacity } from 'react-native';
 import styles from '../../styles/signupStyles';
 
 const SignupScreen = ({ navigation }) => {
@@ -14,8 +14,10 @@ const SignupScreen = ({ navigation }) => {
       Alert.alert("Error", "Passwords do not match!");
       return;
     }
-    // Add your signup logic here
-    Alert.alert("Success", `Account created for: ${username}`);
+
+    Alert.alert("Success", `Account created for: ${username}`, [
+      { text: "OK", onPress: () => navigation.navigate('Login') }
+    ]);
   };
 
   return (
@@ -55,6 +57,9 @@ const SignupScreen = ({ navigation }) => {
         secureTextEntry
       />
       <Button title="Sign Up" onPress={handleSignup} />
+      <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+      <Text style={{ color: 'blue', marginTop: 10 }}>Already have an account? Login</Text>
+      </TouchableOpacity>
     </View>
   );
 };

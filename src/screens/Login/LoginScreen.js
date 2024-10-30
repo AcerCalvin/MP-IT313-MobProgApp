@@ -7,7 +7,12 @@ const LoginScreen = ({ navigation }) => {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    alert(`Logged in as: ${username}`);
+    if (username && password) {
+      alert(`Logged in as: ${username}`);
+      navigation.navigate('Home'); 
+    } else {
+      alert("Please enter both username and password.");
+    }
   };
 
   return (
@@ -28,10 +33,9 @@ const LoginScreen = ({ navigation }) => {
       />
       <Button title="Login" onPress={handleLogin} />
       <TouchableOpacity onPress={() => navigation.navigate('PasswordRecovery')}>
-      <Text style={{ color: 'blue', marginTop: 10 }}>Forgot Password?</Text>
-    </TouchableOpacity>
+        <Text style={{ color: 'blue', marginTop: 10 }}>Forgot Password?</Text>
+      </TouchableOpacity>
     </View>
-      
   );
 };
 
