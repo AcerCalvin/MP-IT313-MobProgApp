@@ -31,9 +31,14 @@ const LoginScreen = ({ navigation }) => {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Login" onPress={handleLogin} />
       <TouchableOpacity onPress={() => navigation.navigate('PasswordRecovery')}>
-        <Text style={{ color: 'blue', marginTop: 10 }}>Forgot Password?</Text>
+        <Text style={{ color: 'blue', marginBottom: 20 }}>Forgot Password?</Text>
+      </TouchableOpacity>
+
+      <Button title="Login" onPress={handleLogin} />
+
+      <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
+        <Text style={{ color: 'blue', marginTop: 10 }}>Don't have an account? Sign Up</Text>
       </TouchableOpacity>
     </View>
   );

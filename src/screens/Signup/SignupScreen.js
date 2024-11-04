@@ -58,7 +58,7 @@ const SignupScreen = ({ navigation }) => {
       />
       <Button title="Sign Up" onPress={handleSignup} />
       <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-      <Text style={{ color: 'blue', marginTop: 10 }}>Already have an account? Login</Text>
+      <Text style={{ color: 'blue', marginTop: 10 }}>Already have an account? Log In</Text>
       </TouchableOpacity>
     </View>
   );
