@@ -1,7 +1,7 @@
+// profileStyles.js
 import { StyleSheet } from "react-native";
 
 const style = StyleSheet.create({
-
     // Profile Section (Avatar and Name) Styles //
     profileSection: {
         alignItems: 'center',
@@ -9,9 +9,9 @@ const style = StyleSheet.create({
         marginBottom: 40,
     },
     imageContainer: {
-        backgroundColor: 'white',
+        backgroundColor: 'red',
         borderRadius: 75,
-        padding: 5,
+        padding: 4,
         marginBottom: 10,
     },
     profileImage: {
@@ -22,10 +22,12 @@ const style = StyleSheet.create({
     profileName: {
         fontSize: 24,
         fontWeight: 'bold',
+        color: 'red', // Set the profile name color to red
     },
     subText: {
         fontSize: 16,
         marginTop: 5,
+        color: 'red', // Set default text color to red
     },
 
     // Profile Details Styles //
@@ -41,6 +43,7 @@ const style = StyleSheet.create({
     // Row Styles //
     settingsText: {
         fontSize: 18,
+        color: 'red', // Set default text color to red
     },
     profileDetailsContainer: {
         flexDirection: 'row',
@@ -62,6 +65,7 @@ const style = StyleSheet.create({
     },
     logoutText: {
         marginLeft: 10,
+        color: 'red', // Ensure logout text color is red
     },
 });
 

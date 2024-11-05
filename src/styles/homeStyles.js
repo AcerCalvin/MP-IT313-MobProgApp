@@ -1,3 +1,4 @@
+// homeStyles.js
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -6,7 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 16,
-    backgroundColor: '#f5f5f5',
+    // Background color will be set in HomeScreen based on theme
   },
   button: {
     marginVertical: 10,
