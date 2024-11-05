@@ -7,8 +7,8 @@ export default function ProfileDetails({ isDarkMode }) {
   return (
     <TouchableOpacity style={style.ProfileDetails}>
       <View style={style.profileDetailsContainer}>
-        <AntDesign name="profile" size={24} color={isDarkMode ? '#fff' : '#000'} />
-        <Text style={[style.settingsText, { color: isDarkMode ? '#fff' : '#000', marginLeft: 10 }]}>Profile details</Text>
+        <AntDesign name="profile" size={24} color={isDarkMode ? 'red' : 'black'} /> 
+        <Text style={[style.settingsText, style.logoutText, { color: isDarkMode ? 'red' : 'black' }]}>Profile details</Text>
       </View>
     </TouchableOpacity>
   );

@@ -5,15 +5,13 @@ import style from '../../styles/profileStyles';
 export default function ProfileSection({ isDarkMode }) {
   return (
     <View style={style.profileSection}>
-      <View style={style.imageContainer}>
+      <View style={[style.imageContainer, { backgroundColor: isDarkMode ? 'red' : 'black' }]}> 
         <Image 
-          source={require('../../assets/noUser.png')}
+          source={require('../../assets/NoUser.jpg')}
           style={style.profileImage} 
         />
       </View>
-      <Text style={[style.profileName, { color: isDarkMode ? '#fff' : '#000' }]}>User</Text>
+      <Text style={[style.profileName, { color: isDarkMode ? 'red' : 'black' }]}>User</Text> 
     </View>
   );
 }
-
-
