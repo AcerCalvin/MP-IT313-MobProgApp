@@ -11,7 +11,7 @@ const HomeScreen = ({ navigation }) => {
     <View style={[styles.container, { backgroundColor: isDarkMode ? 'black' : 'white' }]}>
       <View style={styles.button}>
         <Button
-          title="Go to Login"
+          title="Go to Login" 
           onPress={() => navigation.navigate('Login')}
           color={isDarkMode ? 'red' : 'red'} // Button color remains red
         />
