@@ -15,7 +15,7 @@ const Login = ({ navigation }) => {
   const handleLogin = () => {
     if (username && password) {
       alert(`Logged in as: ${username}`);
-      router.push('Dashboard');
+      router.replace('Dashboard');
     } else {
       alert("Please enter both username and password.");
     }
