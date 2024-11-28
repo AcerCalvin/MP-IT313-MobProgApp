@@ -3,13 +3,13 @@ import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
 import styles from '../styles/loginStyles';
 import CustomButton from '../components/Button'; 
 import { useRouter } from 'expo-router';
-import Icon from 'react-native-vector-icons/MaterialIcons'; // Import the icon library
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Login = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [rememberMe, setRememberMe] = useState(false);
-  const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
+  const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
 
   const handleLogin = () => {
@@ -50,12 +50,12 @@ const Login = ({ navigation }) => {
           placeholderTextColor="lightgray"
           value={password}
           onChangeText={setPassword}
-          secureTextEntry={!showPassword} // Toggle visibility based on state
+          secureTextEntry={!showPassword}
           autoCapitalize="none"
         />
         <TouchableOpacity
-          style={{ position: 'absolute', right: 10, top: 10 }} // Position the icon
-          onPress={() => setShowPassword(!showPassword)} // Toggle password visibility
+          style={{ position: 'absolute', right: 10, top: 10 }} 
+          onPress={() => setShowPassword(!showPassword)} 
         >
           <Icon name={showPassword ? 'visibility' : 'visibility-off'} size={30} color="white" />
         </TouchableOpacity>

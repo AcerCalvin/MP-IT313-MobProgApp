@@ -13,15 +13,11 @@ const PasswordRecoveryScreen = ({ navigation }) => {
       Alert.alert('Invalid Input', 'Please enter a valid email address.');
       return;
     }
-
     setLoading(true);
-
-    // Simulate an API call
     setTimeout(() => {
       setLoading(false);
       setEmail('');
       
-      // Show confirmation alert
       Alert.alert(
         'Recovery Email Sent',
         'If an account with this email exists, a recovery link has been sent.',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import Logo from '../../components/Logo'; // Import the Logo component
+import Logo from '../../../components/Logo';
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'black', // Set background color if needed
+    backgroundColor: 'black',
   },
 });
 

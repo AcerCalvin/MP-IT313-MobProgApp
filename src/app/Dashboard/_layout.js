@@ -1,67 +1,43 @@
-import React from 'react';
-import { Tabs } from 'expo-router';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Drawer } from 'expo-router/drawer';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Stack } from 'expo-router';
+import DrawerContent from '../../components/Drawer';
 
-const Dashboard = () => {
+export default function DrawerLayout() {
   return (
-    
-    <Tabs
-      screenOptions={{
-        headerShown: false,
-        tabBarActiveTintColor: 'white',
-        tabBarStyle: {
-          margin: 10,
-          backgroundColor: '#232323', 
-          borderRadius: 10,
-          position: 'absolute', 
-          bottom: 0, 
-          left: 0, 
-          right: 0, 
-        },
-      }}
-    >
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Home',
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={focused ? 'home' : 'home-outline'}
-              size={24}
-              color='red'
-            />
-          ),
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Drawer 
+        drawerContent={DrawerContent}
+        screenOptions={{
+          headerStyle: { backgroundColor: '#232323' },
+          headerTintColor: 'white',
+          headerTitleStyle: { fontWeight: 'bold' },
+          drawerStyle: {
+            backgroundColor: 'black',
+            borderColor: 'red',       
+            borderWidth: 1,           
+          },
         }}
-      />
-      <Tabs.Screen
-        name="Profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={focused ? 'account' : 'account-outline'}
-              size={24}
-              color='red'
-            />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="Settings"
-        options={{
-          title: 'Settings',
-          tabBarIcon: ({ focused }) => (
-            <MaterialCommunityIcons
-              name={focused ? 'cog' : 'cog-outline'}
-              size={24}
-              color='red'
-            />
-          ),
-        }}
-      />
-    </Tabs>
+      >
+        <Drawer.Screen
+          name="(Tabs)"
+          options={{
+            drawerLabel: 'Home',
+            title: 'Home',
+            drawerIcon: () => <MaterialCommunityIcons name={'home'} size={20} color={'white'} />,
+            drawerLabelStyle: { color: 'white' },
+          }}
+        />
+        <Drawer.Screen
+          name="Settings" 
+          options={{
+            drawerLabel: 'Settings', 
+            title: 'Settings',
+            drawerIcon: () => <MaterialCommunityIcons name={'cog'} size={20} color={'white'} />,
+            drawerLabelStyle: { color: 'white' },
+          }}
+        />
+      </Drawer>
+    </GestureHandlerRootView>
   );
-};
-
-export default Dashboard;
+}

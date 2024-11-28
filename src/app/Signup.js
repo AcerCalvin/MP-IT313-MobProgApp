@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Alert, TouchableOpacity, Image } from 'react-native';
-import { useRouter } from 'expo-router'; // Import useRouter
+import { useRouter } from 'expo-router';
 import styles from '../styles/signupStyles';
 
 const SignupScreen = () => {
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -18,7 +18,7 @@ const SignupScreen = () => {
     }
 
     Alert.alert("Success", `Account created for: ${username}`, [
-      { text: "OK", onPress: () => router.back('/Login') } // Use router to navigate to Login
+      { text: "OK", onPress: () => router.back('/Login') }
     ]);
   };
 
@@ -26,7 +26,7 @@ const SignupScreen = () => {
     <View style={[styles.container, { backgroundColor: 'black' }]}>
       {/* Logo */}
       <Image
-        source={require('../assets/DarkModeLogo.png')} // Use a default logo
+        source={require('../assets/DarkModeLogo.png')}
         style={styles.logo}
       />
       
@@ -35,21 +35,21 @@ const SignupScreen = () => {
 
       {/* Input Fields */}
       <TextInput
-        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} // Updated styles
+        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} 
         placeholder="Name"
         placeholderTextColor="lightgrey"
         value={name}
         onChangeText={setName}
       />
       <TextInput
-        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} // Updated styles
+        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]}
         placeholder="Username"
         placeholderTextColor="lightgrey"
         value={username}
         onChangeText={setUsername}
       />
       <TextInput
-        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} // Updated styles
+        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} 
         placeholder="Email"
         placeholderTextColor="lightgrey"
         value={email}
@@ -57,7 +57,7 @@ const SignupScreen = () => {
         keyboardType="email-address"
       />
       <TextInput
-        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} // Updated styles
+        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} 
         placeholder="Password"
         placeholderTextColor="lightgrey"
         value={password}
@@ -65,7 +65,7 @@ const SignupScreen = () => {
         secureTextEntry
       />
       <TextInput
-        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} // Updated styles
+        style={[styles.input, { borderColor: 'red', backgroundColor: 'black', color: 'white' }]} 
         placeholder="Confirm Password"
         placeholderTextColor="lightgrey"
         value={confirmPassword}
