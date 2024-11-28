@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, Image, Switch, TouchableOpacity, Alert, StyleSheet } from "react-native";
-import { FontAwesome } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Profile = () => {
-  // Set isDarkMode to true for dark mode as default
   const [isDarkMode, setIsDarkMode] = useState(true);
-
   const toggleSwitch = () => setIsDarkMode(previousState => !previousState);
-
   const handleEditField = (fieldName) => {
     Alert.alert("Edit", `${fieldName} field clicked`);
   };
@@ -18,7 +15,7 @@ const Profile = () => {
       <View style={styles.avatarSection}>
         <View style={styles.avatarContainer}>
           <Image
-            source={require("../../assets/NoUser.jpg")} // Replace with your avatar image
+            source={require("../../../assets/NoUser.jpg")}
             style={styles.profileImage}
           />
         </View>
@@ -28,26 +25,26 @@ const Profile = () => {
 
       {/* Editable Fields with Icons */}
       {[
-        { name: "Personal Details", icon: "user" },
+        { name: "Personal Details", icon: "account" },
         { name: "Change Password", icon: "lock" }
       ].map((field) => (
         <TouchableOpacity
           key={field.name}
-          style={[styles.fieldContainer, { borderColor: isDarkMode ? "red" : "black", backgroundColor: isDarkMode ? "#1f1f1f" : "white" }]} // Conditional background color
+          style={[styles.fieldContainer, { borderColor: isDarkMode ? "red" : "black", backgroundColor: isDarkMode ? "#1f1f1f" : "white" }]}
           onPress={() => handleEditField(field.name)}
         >
-          <FontAwesome name={field.icon} size={20} color={isDarkMode ? "white" : "black"} style={styles.icon} />
+          <MaterialCommunityIcons name={field.icon} size={20} color={isDarkMode ? "white" : "black"} style={styles.icon} />
           <Text style={[styles.fieldText, { color: isDarkMode ? "white" : "black" }]}>{field.name}</Text>
         </TouchableOpacity>
       ))}
 
       {/* Dark Mode Toggle */}
       <View style={[styles.darkmodeContainer, { borderColor: isDarkMode ? "red" : "black" , backgroundColor: isDarkMode ? "#1f1f1f" : 'white'}]}>
-        <FontAwesome name={isDarkMode ? "moon-o" : "sun-o"} size={20} color={isDarkMode ? "white" : "black"} style={styles.icon} />
-        <Text style={[styles.fieldText, { color: isDarkMode ? "white" : "black" }]}>Light Mode</Text>
+        <MaterialCommunityIcons name={"moon-waning-crescent"} size={20} color={isDarkMode ? "white" : "black"} style={styles.icon} />
+        <Text style={[styles.fieldText, { color: isDarkMode ? "white" : "black" }]}>Dark Mode</Text>
         <Switch
-          trackColor={{ false: "black", true: "#e24d4d" }}
-          thumbColor={isDarkMode ? "red" : "#f4f3f4"}
+          trackColor={{ false: "lightgrey", true: "#e24d4d" }}
+          thumbColor={isDarkMode ? "red" : "black"}
           ios_backgroundColor="#3e3e3e"
           onValueChange={toggleSwitch}
           value={isDarkMode}

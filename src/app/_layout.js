@@ -17,9 +17,7 @@ const _layout = () => {
           <Stack.Screen name="index" options={{ headerShown: false }} />
           <Stack.Screen name="Signup" options={{ headerShown: false }} />
           <Stack.Screen name="PasswordRecovery" options={{ headerShown: false }} />
-          <Stack.Screen name="Dashboard" options={{ headerShown: true, title: 'Dashboard' }} />
-          <Stack.Screen name="Profile" options={{ headerShown: true, title: 'Profile' }} />
-          <Stack.Screen name="Settings" options={{ headerShown: true, title: 'Settings' }} />
+          <Stack.Screen name="Dashboard" options={{ headerShown: false, title: 'Dashboard' }} />
         </Stack>
       </SafeAreaProvider>
     </PaperProvider>
